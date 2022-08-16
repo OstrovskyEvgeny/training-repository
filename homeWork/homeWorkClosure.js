@@ -20,6 +20,10 @@ let addOne = () => {
 // #3
 
 const factorial = (n) => {
+    if (n < 0) {
+        return 'Аргумент должен быть больше 0'
+    }
+
     let result = 1;
 
     for(let counter = 1; counter <= n; counter++) {
@@ -28,3 +32,5 @@ const factorial = (n) => {
     
     return result;
 }
+
+console.log(factorial(-1));
